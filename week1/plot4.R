@@ -11,6 +11,7 @@ data_required$Datetime <- as.POSIXct(datetime)
 
 ##Creating plots
 par(mfrow=c(2,2))
+par(mar=c(5,4,3,2)+0,1)
 plot(Global_active_power~Datetime,data_required, type="l", ylab="Global Active Power", xlab="")
 plot(Voltage~Datetime,data_required,type="l",ylab="Voltage",xlab="datetime")
 with(data,{
