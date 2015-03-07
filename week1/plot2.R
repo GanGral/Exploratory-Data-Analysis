@@ -10,6 +10,8 @@ datetime <- paste(as.Date(data_required$Date), data_required$Time)
 data_required$Datetime <- as.POSIXct(datetime)
 
 ##Creating plot
+par(mfrow=c(1,1))
+par(mar=c(5,4,3,2)+0,1)
 plot(Global_active_power~Datetime,data_required, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
 ##Exporting plot to a png file

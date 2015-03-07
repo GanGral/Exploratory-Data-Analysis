@@ -10,6 +10,7 @@ datetime <- paste(as.Date(data_required$Date), data_required$Time)
 data_required$Datetime <- as.POSIXct(datetime)
 
 ##Creating plot
+par(mfrow=c(1,1))
 par(mar=c(5,4,3,2)+0,1)
 hist(data_required$Global_active_power,col="Red",main = "Global Active Power", xlab="Global Active Power (killowats)")
 

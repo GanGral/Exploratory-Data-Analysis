@@ -10,7 +10,8 @@ datetime <- paste(as.Date(data_required$Date), data_required$Time)
 data_required$Datetime <- as.POSIXct(datetime)
 
 ##Creating plot
-par(mar=c(4,3,2,1)+0,1)
+par(mfrow=c(1,1))
+par(mar=c(5,4,3,2)+0,1)
 with(data,{plot(Sub_metering_1~Datetime,data_required,type="s",ylab="Energy Sub metering",xlab="")
            lines(Sub_metering_2~Datetime,data_required,type="s",col="red")
            lines(Sub_metering_3~Datetime,data_required,type="s",col="blue")})
